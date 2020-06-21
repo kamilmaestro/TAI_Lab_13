@@ -8,26 +8,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
 class PostController {
 
-  private final PostService postService;
-
-  @Autowired
-  PostController(PostService postService) {
-    this.postService = postService;
-  }
-
-  @CrossOrigin(origins = "http://localhost:4200")
-  @GetMapping("/api/posts")
-  public List<Post> getAllPosts() {
-    return postService.findAllPosts();
-  }
-
-  @CrossOrigin(origins = "http://localhost:4200")
-  @GetMapping("/api/posts/{id}")
-  public Post getPost(@PathVariable int id) {
-    return postService.getById(id);
-  }
+//  private final PostService postService;
+//
+//  @Autowired
+//  PostController(PostService postService) {
+//    this.postService = postService;
+//  }
+//
+//  @CrossOrigin(origins = "http://localhost:4200")
+//  @GetMapping("/api/posts")
+//  public List<Post> getAllPosts() {
+//    return postService.findAllPosts();
+//  }
+//
+//  @CrossOrigin(origins = "http://localhost:4200")
+//  @GetMapping("/api/posts/{id}")
+//  public Post getPost(@PathVariable int id) {
+//    return postService.getById(id);
+//  }
 
 }
